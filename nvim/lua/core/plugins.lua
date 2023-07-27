@@ -24,9 +24,19 @@ return require('packer').startup(function(use)
     tag = '0.1.2',
     requires = { { 'nvim-lua/plenary.nvim'} }
   }
+   use {
+    'svrana/neosolarized.nvim',
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
+  use 'nvim-lualine/lualine.nvim' -- Statusline
   -- completion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
+  use 'kyazdani42/nvim-web-devicons' -- File icons
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
+  use 'nvim-telescope/telescope-file-browser.nvim'
+  use 'norcalli/nvim-colorizer.lua'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
